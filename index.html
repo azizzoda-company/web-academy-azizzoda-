@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="tg" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050b18">
+  <meta name="description" content="WEB ACADEMY аз AZIZZODA COMPANY — академияи мукаммали омӯзиши HTML, CSS, JavaScript, Web Academy Studio ва AI Mentor бо забони тоҷикӣ.">
+  <title>WEB ACADEMY — AZIZZODA COMPANY</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 1. АНИМАТСИЯИ САЙЁРА (2-3 сония ҳангоми кушодашавӣ) -->
+  <div id="splashOverlay" class="splash-overlay" aria-hidden="true">
+    <div class="planet-stage">
+      <div class="planet-ring ring-outer"></div>
+      <div class="planet-ring ring-inner"></div>
+      <div class="planet-sphere">
+        <span class="planet-glow"></span>
+      </div>
+      <svg class="orbit-svg" viewBox="0 0 260 260" width="260" height="260" aria-hidden="true">
+        <defs>
+          <path id="orbitTextPath" d="M 130, 130 m -98, 0 a 98,98 0 1,1 196,0 a 98,98 0 1,1 -196,0" />
+        </defs>
+        <text class="orbit-text">
+          <textPath href="#orbitTextPath" startOffset="0%">
+            WEB ACADEMY • AZIZZODA COMPANY • WEB ACADEMY •
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    <p class="splash-subtitle">Академияи касбии веб-барномасозӣ</p>
+  </div>
+
+  <!-- 2. САҲИФАИ ИСТИҚБОЛИ АВВАЛИН (танҳо бори аввал) -->
+  <div id="welcomeOverlay" class="welcome-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+    <div class="welcome-card">
+      <div class="welcome-badge">AZIZZODA COMPANY</div>
+      <h1 id="welcomeTitle">WEB ACADEMY</h1>
+      <div class="welcome-message">
+        <p>ХУШ ОМАДЕД БА WEB ACADEMY, КИ АЗ ТАРАФИ AZIZZODA COMPANY СОХТА ШУДААСТ.</p>
+        <p>ШУМО МЕТАВОНЕД АЗ 0% ТО 70–80% РАСЕД, ВАЛЕ БАРОИ ПРОФЕССИОНАЛ ШУДАН БА ШУМО ОМӮХТАН ДАР НАЗДИ МУАЛЛИМИ АСОСӢ ТАВСИЯ ДОДА МЕШАВАД.</p>
+        <p>АЗ ШУМО МИННАТДОРЕМ, КИ АЗ ИН ВЕББАРНОМАИ МО ИСТИФОДА МЕБАРЕД.</p>
+        <p>АГАР ЯГОН МУШКИЛӢ Ё ИН КИ ЯГОН ДАРХОСТ БАРОИ СОХТАНИ ВЕББАРНОМА ДОШТА БОШЕД, МЕТАВОНЕД БА ИН СУРОҒАИ МО ДАР INSTAGRAM МУРОҶИАТ КУНЕД.</p>
+      </div>
+      <div class="welcome-actions">
+        <a href="https://www.instagram.com/azizoda_ll10?cnvx=emllOGluZXkwaTF6" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>Instagram: @azizoda_ll10</span>
+        </a>
+        <button type="button" id="startWelcomeBtn" class="btn btn-primary">
+          <span>Оғози омӯзиш</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. САРЛАВҲАИ БОЛОӢ -->
+  <header id="home" class="topbar">
+    <div class="topbar-left">
+      <button type="button" id="menuToggleBtn" class="icon-btn mobile-only" aria-label="Кушодани менюи дарсҳо" title="Меню">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <a href="#home" id="logoBtn" class="brand" aria-label="Саҳифаи асосии WEB ACADEMY">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+            <rect width="32" height="32" rx="9" fill="url(#waGrad)"/>
+            <path d="M11 11L6.5 16L11 21M21 11L25.5 16L21 21M18 9L14 23" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="waGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2563eb"/>
+                <stop offset="1" stop-color="#38bdf8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>WEB ACADEMY</strong>
+          <small>AZIZZODA COMPANY</small>
+        </span>
+      </a>
+    </div>
+
+    <div class="topbar-search">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Ҷустуҷӯи дарс, тег ё истилоҳ..." aria-label="Ҷустуҷӯи дарсҳо" autocomplete="off">
+        <button type="button" id="clearSearchBtn" class="clear-search-btn hidden" aria-label="Тоза кардани ҷустуҷӯ">&times;</button>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <button type="button" id="installPwaBtn" class="btn btn-sm btn-electric hide-xs" title="Насб кардани барнома">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span class="hide-sm">Насб</span>
+      </button>
+
+      <button type="button" id="themeToggleBtn" class="icon-btn" aria-label="Иваз кардани реҷаи шабона ва рӯзона" title="Реҷаи шабона / рӯзона">
+        <svg id="sunIcon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="moonIcon" class="hidden" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <button type="button" id="profileAboutBtn" class="icon-btn" aria-label="Дар бораи мо ва профил" title="Дар бораи мо">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </button>
+
+      <button type="button" id="settingsBtn" class="icon-btn" aria-label="Танзимот" title="Танзимот">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.77 1.02 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 4. НАВИГАТСИЯИ ЗУД -->
+  <nav class="quick-nav" aria-label="Бахшҳои асосӣ">
+    <div class="quick-nav-scroll">
+      <button type="button" class="nav-pill active" data-view="home">Саҳифаи асосӣ</button>
+      <button type="button" class="nav-pill" data-view="courses">Курсҳо</button>
+      <button type="button" class="nav-pill" data-view="studio">Web Academy Studio</button>
+      <button type="button" class="nav-pill" data-view="ai">AI Mentor</button>
+      <button type="button" class="nav-pill" data-view="projects">Лоиҳаҳои ман</button>
+      <button type="button" class="nav-pill" data-view="glossary">Луғат</button>
+      <button type="button" class="nav-pill" data-view="achievements">Нишонҳо ва Имтиҳон</button>
+      <button type="button" class="nav-pill" data-view="favorites">
+        Мунтахабҳо <span id="favCountBadge" class="pill-count">0</span>
+      </button>
+      <button type="button" class="nav-pill" data-view="learned">
+        Омӯхташуда <span id="learnedCountBadge" class="pill-count">0</span>
+      </button>
+      <button type="button" class="nav-pill" data-view="about">Дар бораи мо</button>
+    </div>
+  </nav>
+
+  <!-- 5. СОХТОРИ АСОСӢ -->
+  <div class="app-shell">
+    <div id="sidebarBackdrop" class="sidebar-backdrop hidden"></div>
+
+    <!-- Панели паҳлӯии дарахти курсҳо -->
+    <aside id="sidebar" class="sidebar" aria-label="Сохтори курсҳо ва дарсҳо">
+      <div class="sidebar-header">
+        <div class="sidebar-title">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Барномаи 6-курсӣ</span>
+        </div>
+        <div class="sidebar-controls">
+          <button type="button" id="toggleAllFoldersBtn" class="text-btn">Ҳамаро пӯш</button>
+          <button type="button" id="closeSidebarBtn" class="icon-btn mobile-only" aria-label="Пӯшидани меню">&times;</button>
+        </div>
+      </div>
+
+      <div class="sidebar-lang-tabs" role="tablist" aria-label="Филтри курс дар дарахт">
+        <button type="button" class="tree-lang-btn active" data-tree-lang="ALL">Ҳама</button>
+        <button type="button" class="tree-lang-btn" data-tree-lang="HTML">HTML</button>
+        <button type="button" class="tree-lang-btn" data-tree-lang="CSS">CSS</button>
+        <button type="button" class="tree-lang-btn" data-tree-lang="JavaScript">JS</button>
+      </div>
+
+      <div id="explorerTree" class="explorer-tree" role="tree"></div>
+    </aside>
+
+    <!-- ҚИСМИ МАРКАЗӢ -->
+    <main id="mainContent" class="main-content">
+      <!-- A. САҲИФАИ АСОСӢ (DASHBOARD) -->
+      <section id="dashboardView" class="view-section">
+        <div class="hero-card">
+          <div class="hero-info">
+            <div class="hero-badges">
+              <span class="offline-badge" id="networkStatusBadge">Офлайн омода аст</span>
+              <span class="xp-badge"><strong id="heroXpCount">0</strong> XP</span>
+              <span class="streak-badge"><strong id="heroStreakCount">1</strong> рӯз пайдарпай</span>
+            </div>
+            <h1>Хуш омадед ба WEB ACADEMY</h1>
+            <p>Омӯзиши қадам ба қадами HTML, CSS, JavaScript, сохтори лоиҳа, тугмаҳои премиум ва тарроҳии 3D — бо санҷиши амалии код, Studio ва AI Mentor.</p>
+            <div class="hero-actions">
+              <button type="button" id="continueLearningBtn" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Давом додани омӯзиш</span>
+              </button>
+              <button type="button" id="openStudioFromHeroBtn" class="btn btn-secondary">Web Academy Studio</button>
+              <button type="button" id="openAiFromHeroBtn" class="btn btn-outline">AI Mentor</button>
+            </div>
+          </div>
+
+          <div class="hero-progress-card">
+            <div class="progress-top-row">
+              <div>
+                <div class="overall-percent" id="overallPercentText">0%</div>
+                <div class="overall-label">Пешрафти умумӣ</div>
+              </div>
+              <div class="daily-goal-box">
+                <span class="muted-text">Ҳадафи рӯзона</span>
+                <strong id="dailyGoalText">0 / 3 дарс</strong>
+              </div>
+            </div>
+            <div class="overall-bar">
+              <div class="overall-bar-fill" id="overallProgressFill" style="width: 0%"></div>
+            </div>
+            <div class="hero-stats-mini">
+              <span><strong id="heroLearnedCount">0</strong> / <span id="heroTotalCount">0</span> дарс</span>
+              <span>Мунтахаб: <strong id="heroFavCount">0</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-heading">Курсҳои ман (6 марҳилаи пайдарпай)</h2>
+        <div id="coursesGrid" class="courses-grid"></div>
+
+        <h2 class="section-heading">Дастрасии зуд</h2>
+        <div class="quick-tools-grid">
+          <button type="button" class="tool-tile" data-jump-view="studio">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            <div><strong>Web Academy Studio</strong><span>Навиштани код ва пешнамоиши зинда</span></div>
+          </button>
+          <button type="button" class="tool-tile" data-jump-view="ai">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a4 4 0 0 1 0 8h-2v2a4 4 0 0 1-8 0v-2H6a4 4 0 0 1 0-8h2V6a4 4 0 0 1 4-4z"></path></svg>
+            <div><strong>AI Mentor</strong><span>Ёвари зеҳни сунъӣ бо Gemini</span></div>
+          </button>
+          <button type="button" class="tool-tile" data-jump-view="projects">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <div><strong>Лоиҳаҳои ман</strong><span>Идоракунӣ ва содироти лоиҳаҳо</span></div>
+          </button>
+          <button type="button" class="tool-tile" data-jump-view="glossary">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <div><strong>Луғати барномасозӣ</strong><span>Истилоҳҳои англисӣ бо шарҳи тоҷикӣ</span></div>
+          </button>
+        </div>
+      </section>
+
+      <!-- B. САҲИФАИ КУРСҲО / РӮЙХАТИ ДАРСҲО / ҶУСТУҶӮ -->
+      <section id="listView" class="view-section hidden">
+        <div class="list-header">
+          <div>
+            <h1 id="listViewTitle">Курсҳо ва дарсҳо</h1>
+            <p id="listViewSubtitle" class="muted-text"></p>
+          </div>
+          <div class="list-filters">
+            <select id="courseFilterSelect" class="filter-select" aria-label="Филтр аз рӯи курс">
+              <option value="ALL">Ҳамаи курсҳо</option>
+            </select>
+            <select id="groupFilterSelect" class="filter-select" aria-label="Филтр аз рӯи гурӯҳ">
+              <option value="ALL">Ҳамаи гурӯҳҳо</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="lessonCardsGrid" class="cards-grid"></div>
+
+        <div id="emptyListState" class="empty-state hidden">
+          <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <h3 id="emptyStateTitle">Ҳеҷ дарс ёфт нашуд</h3>
+          <p id="emptyStateDesc">Калимаи дигарро ворид кунед ё филтрҳоро тоза намоед.</p>
+          <button type="button" id="resetFiltersBtn" class="btn btn-secondary">Нишон додани ҳамаи дарсҳо</button>
+        </div>
+      </section>
+
+      <!-- C. САҲИФАИ МУФАССАЛИ ДАРС + ВАЗИФАИ АМАЛӢ -->
+      <section id="lessonView" class="view-section hidden">
+        <div class="lesson-topbar">
+          <div class="lesson-breadcrumb">
+            <button type="button" id="backToListBtn" class="btn btn-sm btn-secondary">&larr; Бозгашт</button>
+            <span id="lessonBreadcrumbText" class="breadcrumb-path"></span>
+          </div>
+          <div class="lesson-actions">
+            <button type="button" id="toggleFavoriteBtn" class="btn btn-sm btn-outline">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span id="favBtnText">Ба мунтахаб</span>
+            </button>
+            <span id="lessonStatusBadge" class="status-pill">Дарси фаъол</span>
+          </div>
+        </div>
+
+        <article class="lesson-article">
+          <header class="lesson-header">
+            <div class="lesson-meta-badges">
+              <span id="lessonLangBadge" class="lang-badge">HTML</span>
+              <span id="lessonGroupBadge" class="group-badge">Basics</span>
+            </div>
+            <h1 id="lessonTitle" class="lesson-title"></h1>
+            <p id="lessonDescription" class="lesson-lead"></p>
+          </header>
+
+          <div class="lesson-info-grid">
+            <div class="info-box">
+              <h3>Вазифаи асосӣ</h3>
+              <p id="lessonPurpose"></p>
+            </div>
+            <div class="info-box">
+              <h3>Чаро ва дар куҷо истифода мешавад</h3>
+              <p id="lessonUsage"></p>
+            </div>
+          </div>
+
+          <div class="lesson-block">
+            <div class="block-header">
+              <h3>Синтаксиси дуруст</h3>
+              <button type="button" class="copy-btn" data-copy-target="lessonSyntaxCode">Нусхабардорӣ</button>
+            </div>
+            <pre class="code-pre"><code id="lessonSyntaxCode"></code></pre>
+          </div>
+
+          <div class="lesson-block">
+            <div class="block-header">
+              <h3>Мисоли кӯтоҳ</h3>
+              <button type="button" class="copy-btn" data-copy-target="lessonShortCode">Нусхабардорӣ</button>
+            </div>
+            <pre class="code-pre"><code id="lessonShortCode"></code></pre>
+          </div>
+
+          <!-- ВАЗИФАИ АМАЛӢ (пеш аз намоиши ҷавоби тайёр) -->
+          <div class="task-box">
+            <div class="task-box-header">
+              <div>
+                <span class="task-label">ВАЗИФАИ АМАЛӢ (Барои кушодани дарси навбатӣ ҳатмист)</span>
+                <h3 id="lessonTaskTitle">Машқи амалӣ</h3>
+              </div>
+              <div class="task-controls">
+                <button type="button" id="showHintBtn" class="btn btn-sm btn-outline">Нишон додани роҳнамо</button>
+                <button type="button" id="resetTaskBtn" class="btn btn-sm btn-secondary">Аз нав оғоз кардан</button>
+              </div>
+            </div>
+
+            <p id="lessonTaskPrompt" class="task-prompt"></p>
+
+            <div id="lessonHintBox" class="hint-box hidden">
+              <strong>Роҳнамо:</strong> <span id="lessonHintText"></span>
+            </div>
+
+            <textarea id="lessonCodeEditor" class="task-editor" rows="7" spellcheck="false" aria-label="Майдони навиштани коди вазифа"></textarea>
+
+            <div class="task-submit-row">
+              <button type="button" id="checkTaskBtn" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Санҷидани ҷавоб</span>
+              </button>
+              <button type="button" id="toggleSolutionBtn" class="btn btn-sm btn-secondary hidden">Мисоли ҷавоби дуруст</button>
+            </div>
+
+            <div id="taskFeedbackBox" class="task-feedback hidden"></div>
+          </div>
+
+          <!-- ҚИСМИ ҶАВОБИ ПУРРА (пас аз анҷоми вазифа ё бо тугма пас аз кӯшиш) -->
+          <div id="lessonSolutionSection" class="hidden">
+            <div class="lesson-block">
+              <div class="block-header">
+                <h3>Мисоли пурраи коршоям</h3>
+                <button type="button" class="copy-btn" data-copy-target="lessonFullCode">Нусхабардорӣ</button>
+              </div>
+              <pre class="code-pre"><code id="lessonFullCode"></code></pre>
+            </div>
+
+            <div class="lesson-block">
+              <div class="block-header">
+                <h3>Натиҷаи иҷрои код</h3>
+                <span class="preview-note">Муҳити ҷудошуда (Sandbox)</span>
+              </div>
+              <div class="output-panel">
+                <p id="lessonOutputText" class="output-text"></p>
+                <iframe id="lessonPreviewFrame" class="preview-frame" title="Натиҷаи зиндаи код" sandbox="allow-scripts"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="lesson-info-grid">
+            <div class="callout callout-warning">
+              <h3>Хатогиҳои маъмул</h3>
+              <p id="lessonMistakes"></p>
+            </div>
+            <div class="callout callout-tip">
+              <h3>Маслиҳати омӯзишӣ</h3>
+              <p id="lessonTip"></p>
+            </div>
+          </div>
+        </article>
+
+        <div class="lesson-pager">
+          <button type="button" id="prevLessonBtn" class="btn btn-secondary">&larr; Дарси қаблӣ</button>
+          <button type="button" id="nextLessonBtn" class="btn btn-primary">Дарси навбатӣ &rarr;</button>
+        </div>
+      </section>
+
+      <!-- D. WEB ACADEMY STUDIO -->
+      <section id="studioView" class="view-section hidden">
+        <div class="studio-toolbar">
+          <div class="studio-title-group">
+            <h1>WEB ACADEMY STUDIO</h1>
+            <select id="studioProjectSelect" class="filter-select" aria-label="Интихоби лоиҳа"></select>
+            <button type="button" id="studioNewProjectBtn" class="btn btn-sm btn-outline">+ Лоиҳаи нав</button>
+            <button type="button" id="studioExportProjectBtn" class="btn btn-sm btn-secondary">Содирот</button>
+          </div>
+          <div class="studio-run-group">
+            <button type="button" id="studioUndoBtn" class="btn btn-sm btn-secondary" title="Бекор кардан (Undo)">Undo</button>
+            <button type="button" id="studioRedoBtn" class="btn btn-sm btn-secondary" title="Баргардонидан (Redo)">Redo</button>
+            <button type="button" id="studioFindToggleBtn" class="btn btn-sm btn-secondary">Ҷустуҷӯ</button>
+            <button type="button" id="studioClearFileBtn" class="btn btn-sm btn-secondary">Тоза</button>
+            <button type="button" id="studioRunBtn" class="btn btn-sm btn-primary">Иҷро (Run)</button>
+          </div>
+        </div>
+
+        <div id="studioFindBar" class="studio-find-bar hidden">
+          <input type="text" id="studioFindInput" placeholder="Ёфтани матн дар код..." aria-label="Ёфтани матн">
+          <input type="text" id="studioReplaceInput" placeholder="Иваз кардан бо..." aria-label="Иваз кардан бо">
+          <button type="button" id="studioReplaceAllBtn" class="btn btn-sm btn-outline">Ҳамаро иваз кун</button>
+          <button type="button" id="studioFindCloseBtn" class="icon-btn" aria-label="Пӯшидани ҷустуҷӯ">&times;</button>
+        </div>
+
+        <div class="studio-workspace">
+          <!-- Файлҳои лоиҳа -->
+          <div class="studio-files-pane">
+            <div class="pane-header">
+              <span>Файлҳои лоиҳа</span>
+              <div class="pane-actions">
+                <button type="button" id="studioNewFileBtn" class="text-btn" title="Файли нав">+ Файл</button>
+                <button type="button" id="studioNewFolderBtn" class="text-btn" title="Папкаи нав">+ Папка</button>
+              </div>
+            </div>
+            <div id="studioFileList" class="studio-file-list"></div>
+          </div>
+
+          <!-- Муҳаррир бо рақамҳои сатр -->
+          <div class="studio-editor-pane">
+            <div class="pane-header">
+              <span id="studioActiveFileName">index.html</span>
+              <div class="pane-actions">
+                <button type="button" id="studioRenameFileBtn" class="text-btn">Тағйири ном</button>
+                <button type="button" id="studioDeleteFileBtn" class="text-btn text-danger">Нест кардан</button>
+              </div>
+            </div>
+            <div class="editor-with-lines">
+              <div id="studioLineNumbers" class="line-numbers" aria-hidden="true">1</div>
+              <textarea id="studioCodeEditor" class="studio-textarea" spellcheck="false" aria-label="Муҳаррири коди Studio"></textarea>
+            </div>
+          </div>
+
+          <!-- Пешнамоиш -->
+          <div id="studioPreviewPane" class="studio-preview-pane">
+            <div class="pane-header">
+              <span>Пешнамоиши зинда (Sandbox)</span>
+              <div class="pane-actions">
+                <button type="button" id="studioRerunBtn" class="text-btn">Аз нав</button>
+                <button type="button" id="studioExpandBtn" class="text-btn">Васеъ</button>
+              </div>
+            </div>
+            <iframe id="studioPreviewFrame" class="studio-iframe" title="Пешнамоиши лоиҳа" sandbox="allow-scripts"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- E. AI MENTOR -->
+      <section id="aiView" class="view-section hidden">
+        <div class="ai-layout">
+          <div class="ai-key-card">
+            <div class="ai-key-header">
+              <div>
+                <h1>AI MENTOR — Ёвари зеҳни сунъӣ</h1>
+                <p class="muted-text">Ҳар як корбар API Key-и шахсии Gemini-и худро истифода мебарад. AZIZZODA COMPANY калиди шуморо дар сервер нигоҳ намедорад.</p>
+              </div>
+              <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">Гирифтани API Key</a>
+            </div>
+
+            <div class="ai-key-controls">
+              <div class="key-input-wrap">
+                <input type="password" id="aiApiKeyInput" placeholder="API Key-и Gemini-и худро ворид кунед (AIza...)" autocomplete="off">
+                <button type="button" id="aiToggleKeyVisBtn" class="btn btn-sm btn-secondary">Нишон додан</button>
+              </div>
+              <button type="button" id="aiCheckKeyBtn" class="btn btn-sm btn-primary">Санҷидани калид</button>
+              <button type="button" id="aiClearKeyBtn" class="btn btn-sm btn-danger">Нест кардан</button>
+              <select id="aiModelSelect" class="filter-select" aria-label="Интихоби модели Gemini">
+                <option value="">Аввал калидро санҷед ё ворид кунед</option>
+              </select>
+            </div>
+
+            <div class="ai-key-options">
+              <label class="checkbox-label">
+                <input type="checkbox" id="aiPersistKeyCheckbox">
+                <span>Калидро дар ин браузер захира кун (танҳо бо иҷозати шумо; калид дар браузер пурра махфӣ нест)</span>
+              </label>
+              <span id="aiStatusLabel" class="muted-text">Ҳолат: Калид ворид нашудааст (истифодаи AI ихтиёрӣ аст)</span>
+            </div>
+          </div>
+
+          <div class="ai-chat-card">
+            <div class="ai-quick-prompts">
+              <button type="button" class="prompt-chip" data-prompt="Фарқи байни let ва const-ро бо мисоли содаи тоҷикӣ фаҳмон.">Фарқи let ва const</button>
+              <button type="button" class="prompt-chip" data-prompt="Чӣ тавр бо Flexbox ду қуттиро дар марказ ҷойгир кунам?">Марказкунӣ бо Flexbox</button>
+              <button type="button" class="prompt-chip" data-prompt="Тугмаи зебои SVG бе эмодзи бо эффекти hover соз.">Тугмаи SVG бо CSS</button>
+              <button type="button" class="prompt-chip" data-prompt="Чаро коди HTML/CSS-и ман дар телефон калон мебарояд?">Мутобиқат ба Android</button>
+            </div>
+
+            <div id="aiMessagesBox" class="ai-messages">
+              <div class="ai-msg ai-msg-bot">
+                <strong>AI Mentor:</strong> Салом! Ман ёвари омӯзишии шумо барои HTML, CSS ва JavaScript ҳастам. Барои кор бо ман пайвастшавӣ ба интернет ва API Key-и шахсии Gemini лозим аст. Саволи худро нависед!
+              </div>
+            </div>
+
+            <form id="aiChatForm" class="ai-input-row">
+              <textarea id="aiPromptInput" rows="2" placeholder="Савол ё коди худро барои таҳлил нависед..."></textarea>
+              <button type="submit" id="aiSendBtn" class="btn btn-primary">Ирсол</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- F. ЛОИҲАҲОИ МАН -->
+      <section id="projectsView" class="view-section hidden">
+        <div class="list-header">
+          <div>
+            <h1>Лоиҳаҳои ман</h1>
+            <p class="muted-text">Ҳамаи лоиҳаҳои дар Web Academy Studio сохташуда ба таври офлайн нигоҳ дошта мешаванд.</p>
+          </div>
+          <div class="list-filters">
+            <button type="button" id="projectsCreateBtn" class="btn btn-sm btn-primary">+ Лоиҳаи нав</button>
+            <label class="btn btn-sm btn-secondary" style="cursor:pointer;">
+              <span>Ворид кардани JSON</span>
+              <input type="file" id="projectsImportInput" accept=".json" class="hidden">
+            </label>
+          </div>
+        </div>
+        <div id="projectsGalleryGrid" class="cards-grid"></div>
+      </section>
+
+      <!-- G. ЛУҒАТИ БАРНОМАСОЗӢ -->
+      <section id="glossaryView" class="view-section hidden">
+        <div class="list-header">
+          <div>
+            <h1>Луғати барномасозӣ (Офлайн)</h1>
+            <p class="muted-text">Истилоҳҳои муҳими HTML, CSS ва JavaScript бо забони англисӣ ва шарҳи тоҷикӣ.</p>
+          </div>
+          <input type="search" id="glossarySearchInput" class="filter-select" placeholder="Ҷустуҷӯи истилоҳ..." aria-label="Ҷустуҷӯ дар луғат">
+        </div>
+        <div id="glossaryGrid" class="cards-grid"></div>
+      </section>
+
+      <!-- H. НИШОНҲО ВА ИМТИҲОНИ НИҲОӢ -->
+      <section id="achievementsView" class="view-section hidden">
+        <div class="list-header">
+          <div>
+            <h1>Нишонҳои муваффақият ва Имтиҳони ниҳоӣ</h1>
+            <p class="muted-text">Холҳо (XP), нишонҳо, санҷиши назариявӣ ва шаҳодатномаи дохилии Web Academy.</p>
+          </div>
+        </div>
+
+        <div id="badgesGrid" class="cards-grid" style="margin-bottom: 24px;"></div>
+
+        <div class="exam-card">
+          <h2>Имтиҳони ниҳоии Web Academy</h2>
+          <p class="muted-text">Барои гирифтани нишони хатми курси дохилии барнома, ҳадди ақал 4 аз 5 саволро дуруст ҷавоб диҳед.</p>
+          <div id="examContainer"></div>
+          <div id="certificateBox" class="certificate-box hidden">
+            <div class="cert-badge">ШАҲОДАТНОМАИ ДОХИЛИИ WEB ACADEMY</div>
+            <h3>Табрик! Шумо имтиҳони дохилиро бо муваффақият гузаштед.</h3>
+            <p id="certStatsText"></p>
+            <p class="cert-disclaimer">Эзоҳ: Ин нишон ва шаҳодатномаи дохилии барномаи Web Academy (AZIZZODA COMPANY) буда, аккредитатсияи расмии давлатии беруна нест.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- I. ДАР БОРАИ МО -->
+      <section id="aboutView" class="view-section hidden">
+        <div class="about-page-card">
+          <div class="welcome-badge">AZIZZODA COMPANY</div>
+          <h1>Дар бораи WEB ACADEMY</h1>
+          <div class="welcome-message">
+            <p>ХУШ ОМАДЕД БА WEB ACADEMY, КИ АЗ ТАРАФИ AZIZZODA COMPANY СОХТА ШУДААСТ.</p>
+            <p>ШУМО МЕТАВОНЕД АЗ 0% ТО 70–80% РАСЕД, ВАЛЕ БАРОИ ПРОФЕССИОНАЛ ШУДАН БА ШУМО ОМӮХТАН ДАР НАЗДИ МУАЛЛИМИ АСОСӢ ТАВСИЯ ДОДА МЕШАВАД.</p>
+            <p>АЗ ШУМО МИННАТДОРЕМ, КИ АЗ ИН ВЕББАРНОМАИ МО ИСТИФОДА МЕБАРЕД.</p>
+            <p>АГАР ЯГОН МУШКИЛӢ Ё ИН КИ ЯГОН ДАРХОСТ БАРОИ СОХТАНИ ВЕББАРНОМА ДОШТА БОШЕД, МЕТАВОНЕД БА ИН СУРОҒАИ МО ДАР INSTAGRAM МУРОҶИАТ КУНЕД.</p>
+          </div>
+          <div class="welcome-actions">
+            <a href="https://www.instagram.com/azizoda_ll10?cnvx=emllOGluZXkwaTF6" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>Instagram: https://www.instagram.com/azizoda_ll10</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- 6. РАВЗАНАИ ТАНЗИМОТ ВА ЗАХИРАКУНӢ -->
+  <div id="settingsModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="settingsTitle">Танзимот ва нусхаи эҳтиётӣ</h2>
+        <button type="button" id="closeSettingsBtn" class="icon-btn" aria-label="Пӯшидани танзимот">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="setting-row">
+          <div>
+            <strong>Намуди зоҳирӣ (Theme)</strong>
+            <p class="muted-text">Реҷаи шабона (пешфарз) ё рӯзона</p>
+          </div>
+          <button type="button" id="modalThemeToggleBtn" class="btn btn-sm btn-outline">Иваз кардан</button>
+        </div>
+
+        <div class="setting-row">
+          <div>
+            <strong>Андозаи шрифти код</strong>
+            <p class="muted-text">Барои хондани осонтар дар Android</p>
+          </div>
+          <select id="codeFontSizeSelect" class="filter-select" aria-label="Андозаи шрифти код">
+            <option value="13">Хурд (13px)</option>
+            <option value="14.5" selected>Миёна (14.5px)</option>
+            <option value="16">Калон (16px)</option>
+          </select>
+        </div>
+
+        <div class="setting-row">
+          <div>
+            <strong>Нусхаи эҳтиётӣ (Backup)</strong>
+            <p class="muted-text">Содирот ва воридоти пешрафт ва лоиҳаҳо (бе API Key)</p>
+          </div>
+          <div style="display:flex;gap:6px;">
+            <button type="button" id="exportBackupBtn" class="btn btn-sm btn-outline">Содирот</button>
+            <label class="btn btn-sm btn-secondary" style="cursor:pointer;">
+              <span>Воридот</span>
+              <input type="file" id="importBackupInput" accept=".json" class="hidden">
+            </label>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <div>
+            <strong>Тоза кардани маълумоти захирашуда</strong>
+            <p class="muted-text">Ҳамаи пешрафт, XP ва мунтахабҳо пок мешаванд</p>
+          </div>
+          <button type="button" id="resetDataBtn" class="btn btn-sm btn-danger">Тоза кардан</button>
+        </div>
+
+        <div id="resetConfirmBox" class="confirm-box hidden">
+          <p>Оё мутмаин ҳастед, ки ҳамаи пешрафт, лоиҳаҳо ва мунтахабҳоро тоза кунед?</p>
+          <div class="confirm-actions">
+            <button type="button" id="confirmResetBtn" class="btn btn-sm btn-danger">Бале, тоза шавад</button>
+            <button type="button" id="cancelResetBtn" class="btn btn-sm btn-secondary">Бекор кардан</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. РАВЗАНАИ НАСБИ PWA -->
+  <div id="installModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="installTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="installTitle">Насби WEB ACADEMY дар Android</h2>
+        <button type="button" id="closeInstallBtn" class="icon-btn" aria-label="Пӯшидан">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Барои насби барнома ба экрани асосии телефони Android:</p>
+        <ol class="install-steps">
+          <li>Барномаро тавассути <strong>HTTPS</strong> ё <code>localhost</code> дар <strong>Google Chrome</strong> кушоед.</li>
+          <li>Менюи се нуқтаи кунҷи рости болоии Chrome-ро пахш кунед.</li>
+          <li>Тугмаи <strong>«Add to Home screen»</strong> ё <strong>«Install app»</strong>-ро интихоб намоед.</li>
+        </ol>
+        <p class="muted-text">Эзоҳ: Дар протоколи <code>file://</code> насби автоматии PWA аз тарафи браузер маҳдуд карда мешавад.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. РАВЗАНАИ МОДАЛИИ УМУМӢ (барои номи файл/лоиҳа ё тасдиқ) -->
+  <div id="promptModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="promptModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="promptModalTitle">Ворид кардани ном</h2>
+        <button type="button" id="closePromptModalBtn" class="icon-btn" aria-label="Пӯшидан">&times;</button>
+      </div>
+      <form id="promptModalForm" class="modal-body">
+        <p id="promptModalDesc" class="muted-text"></p>
+        <input type="text" id="promptModalInput" class="filter-select" style="width:100%;" autocomplete="off">
+        <div class="confirm-actions">
+          <button type="submit" id="promptModalOkBtn" class="btn btn-sm btn-primary">Тасдиқ</button>
+          <button type="button" id="promptModalCancelBtn" class="btn btn-sm btn-secondary">Бекор</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Паёми зуд (Toast) -->
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
